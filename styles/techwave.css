@@ -370,6 +370,48 @@
 }
 
 
+/* Footer Section Styles */
+.techwave-footer {
+    padding: 120px 120px;
+    background-image: url("../assets/footer-bg.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.footer-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 32px;
+}
+
+.social-link {
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.social-link .link {
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.link a {
+    text-decoration: none;
+    text-align: left;
+}
+
+.link-name,
+.copyright {
+    text-align: center;
+    font-weight: 500;
+    color: var(--font-color);
+    opacity: 0.6;
+}
+
 
 
 
@@ -416,7 +458,8 @@
     /* All section styles */
     .podcast,
     .techwave,
-    .social-media {
+    .social-media,
+    .techwave-footer {
         padding: 40px 20px;
     }
 
@@ -530,4 +573,20 @@
         justify-content: center;
     }
 
+
+    /* Footer Styles */
+    .techwave-footer {
+        background-image: url("../assets/footer-bg2.png");
+        background-position: center;
+        background-size: contain;
+    }
+
+    .footer-logo img {
+        max-width: 219px;
+    }
+
+    .social-link {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
 }
