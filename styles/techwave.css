@@ -391,11 +391,6 @@
         display: none;
     }
 
-    /* Main styles */
-    main>section {
-        padding: 40px 10px;
-    }
-
     /* Banner styles */
     .hero {
         min-height: 50vh;
@@ -416,6 +411,13 @@
 
     .hero-content h1 {
         font-size: 2.2rem;
+    }
+
+    /* All section styles */
+    .podcast,
+    .techwave,
+    .social-media {
+        padding: 40px 20px;
     }
 
     /* Podcast styles */
@@ -496,13 +498,12 @@
     }
 
     .video iframe {
-        width: 400px;
-        height: 225px;
+        width: 100%;
     }
 
     .video-content {
         gap: 8px;
-        padding: 14px;
+        padding: 12px;
     }
 
     .video-content h2 {
