@@ -48,6 +48,9 @@
 :root {
     --primary-color: #1A0B2E;
     --second-color: #00FF88;
+    --third-color: #230E3D;
+    --forth-color: rgba(53, 17, 101, 0.4);
+    --fifth-color: #250D44;
     --font-color: #FFFFFF;
 }
 
@@ -193,7 +196,7 @@
     opacity: 0.1;
 }
 
-/* Cards */
+/* Number Cards */
 .number-container {
     margin-top: 75px;
     grid-template-columns: repeat(4, 1fr);
@@ -214,6 +217,163 @@
     line-height: 20px;
 }
 
+
+/* Why Choose Techwave Section styles */
+.techwave {
+    background-color: var(--third-color);
+    padding: 120px 10px;
+}
+
+.techwave-container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.techwave-container h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.cards-container {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding: 40px;
+    border-radius: 40px;
+    background-color: var(--forth-color);
+}
+
+.card h2 {
+    font-size: 1.5;
+    font-weight: 700;
+}
+
+.card p {
+    line-height: 24px;
+    opacity: 0.6;
+}
+
+/* Grid layout design */
+.headphone {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.mobile,
+.global {
+    grid-column: span 4;
+    grid-row: span 1;
+}
+
+.exclusive {
+    grid-column: span 4;
+    grid-row: span 1;
+}
+
+.resource {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+
+/* Featured and Host Section */
+.social-media {
+    padding: 120px 10px;
+    background-color: var(--primary-color);
+}
+
+.social-media-contents {
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Featured Episodes styles */
+.feature-container h1,
+.host-container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.video-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.video iframe {
+    border-radius: 24px 24px 0px 0px;
+}
+
+.video-content {
+    background-color: var(--fifth-color);
+    border-radius: 0px 0px 24px 24px;
+    padding: 24px;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.video-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.video-content p,
+.host-details p {
+    line-height: 24px;
+    opacity: 0.6;
+}
+
+.video-content .time {
+    font-weight: 600;
+    color: var(--second-color);
+    opacity: 1;
+}
+
+/* Meet The Host styles */
+.host-content {
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    border-radius: 40px;
+    background-color: var(--forth-color);
+    padding: 40px;
+}
+
+.host-details {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.host-details h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.host-details ul {
+    gap: 8px;
+    list-style: none;
+}
+
+
+
+
+
+
 /* Media Query for Mobile */
 @media screen and (max-width: 576px) {
 
@@ -231,10 +391,13 @@
         display: none;
     }
 
-    /* Banner styles */
-
-    .hero {
+    /* Main styles */
+    main>section {
         padding: 40px 10px;
+    }
+
+    /* Banner styles */
+    .hero {
         min-height: 50vh;
     }
 
@@ -256,10 +419,6 @@
     }
 
     /* Podcast styles */
-    .podcast {
-        padding: 40px 10px;
-    }
-
     .podcast-content h1 {
         font-size: 2rem;
         margin-bottom: 16px;
@@ -280,9 +439,94 @@
         line-height: 48px;
     }
 
-    ;
-
     .number-container {
         gap: 20px;
     }
+
+    /* Techwave styles */
+    .techwave {
+        padding: 40px 10px;
+    }
+
+    .techwave-container h1 {
+        font-size: 2rem;
+        margin-bottom: 16px;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 16px;
+    }
+
+    .card {
+        padding: 24px;
+        border-radius: 24px;
+    }
+
+    .card h2 {
+        font-size: 1.375rem;
+    }
+
+    .headphone,
+    .mobile,
+    .global,
+    .exclusive,
+    .resource {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    /* Social media */
+    .social-media-contents {
+        gap: 60px;
+    }
+
+    /* Featured styles */
+
+    .feature-container h1,
+    .host-container h1 {
+        font-size: 2rem;
+        margin-bottom: 24px;
+    }
+
+    .video-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .video iframe {
+        width: 400px;
+        height: 225px;
+    }
+
+    .video-content {
+        gap: 8px;
+        padding: 14px;
+    }
+
+    .video-content h2 {
+        font-size: 1.25rem;
+    }
+
+    /* Host styles */
+    .host-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 24px;
+    }
+
+    .host-details {
+        text-align: center;
+    }
+
+    .host-details h2 {
+        font-size: 1.5rem;
+    }
+
+    .host-details ul {
+        justify-content: center;
+    }
+
 }
